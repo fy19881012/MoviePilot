@@ -25,7 +25,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: fy19881012/moviepilot-v2
+          images: ${{ secrets.DOCKER_USERNAME }}/moviepilot-v2
           tags: |
             type=raw,value=${{ env.app_version }}
             type=raw,value=latest
